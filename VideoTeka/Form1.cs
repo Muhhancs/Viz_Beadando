@@ -8,7 +8,7 @@ namespace VideoTeka
     public partial class Form1 : Form
     {
         List<loginData> userLoginData;
-        
+
         public Form1()
         {
             getDataFromDatabase();
@@ -23,7 +23,8 @@ namespace VideoTeka
 
             string pwdFromDatabase = getPwd(user);
             if (pwdFromDatabase != "error") chechkIfPwdCorrect(pwd, pwdFromDatabase);
-            else {
+            else
+            {
                 errorMsg.Text = "Incorrect login data!";
                 errorMsg.Visible = true;
                 userText.Clear();
@@ -33,11 +34,13 @@ namespace VideoTeka
 
         private void chechkIfPwdCorrect(string pwd, string inDataBase)
         {
-            if(pwd==inDataBase)
+            if (pwd == inDataBase)
             {
-                errorMsg.Visible=true;
+                errorMsg.Visible = true;
                 errorMsg.Text = "Correct login data!";
                 //opennewTab
+                Form2 form = new Form2();
+                form.ShowDialog();
             }
             else
             {
@@ -53,7 +56,7 @@ namespace VideoTeka
             string result = "error";
             for (int i = 0; i < userLoginData.Count(); i++)
             {
-                if(user == userLoginData[i].Username || user == userLoginData[i].Email) result = userLoginData[i].Password;
+                if (user == userLoginData[i].Username || user == userLoginData[i].Email) result = userLoginData[i].Password;
             }
             return result;
         }

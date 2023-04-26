@@ -28,72 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.userText = new System.Windows.Forms.TextBox();
-            this.pwdText = new System.Windows.Forms.TextBox();
-            this.loginBtn = new System.Windows.Forms.Button();
-            this.errorMsg = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            userText = new TextBox();
+            pwdText = new TextBox();
+            loginBtn = new Button();
+            errorMsg = new Label();
+            SuspendLayout();
             // 
             // userText
             // 
-            this.userText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.userText.BackColor = System.Drawing.SystemColors.Window;
-            this.userText.Font = new System.Drawing.Font("PanRoman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.userText.Location = new System.Drawing.Point(315, 182);
-            this.userText.MaxLength = 100;
-            this.userText.MinimumSize = new System.Drawing.Size(500, 50);
-            this.userText.Name = "userText";
-            this.userText.PlaceholderText = "Username or Email";
-            this.userText.Size = new System.Drawing.Size(500, 50);
-            this.userText.TabIndex = 0;
+            userText.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            userText.BackColor = SystemColors.Window;
+            userText.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            userText.Location = new Point(315, 182);
+            userText.MaxLength = 100;
+            userText.MinimumSize = new Size(500, 50);
+            userText.Name = "userText";
+            userText.PlaceholderText = "Username or Email";
+            userText.Size = new Size(500, 50);
+            userText.TabIndex = 0;
             // 
             // pwdText
             // 
-            this.pwdText.Font = new System.Drawing.Font("PanRoman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pwdText.Location = new System.Drawing.Point(318, 273);
-            this.pwdText.MaxLength = 50;
-            this.pwdText.MinimumSize = new System.Drawing.Size(500, 50);
-            this.pwdText.Name = "pwdText";
-            this.pwdText.PlaceholderText = "Password";
-            this.pwdText.Size = new System.Drawing.Size(500, 50);
-            this.pwdText.TabIndex = 1;
+            pwdText.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            pwdText.Location = new Point(318, 273);
+            pwdText.MaxLength = 50;
+            pwdText.MinimumSize = new Size(500, 50);
+            pwdText.Name = "pwdText";
+            pwdText.PlaceholderText = "Password";
+            pwdText.Size = new Size(500, 50);
+            pwdText.TabIndex = 1;
             // 
             // loginBtn
             // 
-            this.loginBtn.Font = new System.Drawing.Font("PanRoman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.loginBtn.Location = new System.Drawing.Point(403, 376);
-            this.loginBtn.Name = "loginBtn";
-            this.loginBtn.Size = new System.Drawing.Size(312, 58);
-            this.loginBtn.TabIndex = 2;
-            this.loginBtn.Text = "Login";
-            this.loginBtn.UseVisualStyleBackColor = true;
-            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click);
+            loginBtn.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            loginBtn.Location = new Point(403, 376);
+            loginBtn.Name = "loginBtn";
+            loginBtn.Size = new Size(312, 58);
+            loginBtn.TabIndex = 2;
+            loginBtn.Text = "Login";
+            loginBtn.UseVisualStyleBackColor = true;
+            loginBtn.Click += loginBtn_Click;
             // 
             // errorMsg
             // 
-            this.errorMsg.AutoSize = true;
-            this.errorMsg.Location = new System.Drawing.Point(521, 124);
-            this.errorMsg.Name = "errorMsg";
-            this.errorMsg.Size = new System.Drawing.Size(38, 15);
-            this.errorMsg.TabIndex = 3;
-            this.errorMsg.Text = "label1";
-            this.errorMsg.Visible = false;
+            errorMsg.AutoSize = true;
+            errorMsg.Location = new Point(521, 124);
+            errorMsg.Name = "errorMsg";
+            errorMsg.Size = new Size(38, 15);
+            errorMsg.TabIndex = 3;
+            errorMsg.Text = "label1";
+            errorMsg.Visible = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1145, 639);
-            this.Controls.Add(this.errorMsg);
-            this.Controls.Add(this.loginBtn);
-            this.Controls.Add(this.pwdText);
-            this.Controls.Add(this.userText);
-            this.Name = "Form1";
-            this.Text = "VideoTeka";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(1145, 439);
+            Controls.Add(errorMsg);
+            Controls.Add(loginBtn);
+            Controls.Add(pwdText);
+            Controls.Add(userText);
+            Name = "Form1";
+            Text = "VideoTeka";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
