@@ -11,6 +11,8 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
 namespace VideoTeka
 {
     public partial class Form2 : Form
@@ -18,14 +20,8 @@ namespace VideoTeka
         public Form2()
         {
             InitializeComponent();
-            //getDataFromDatabase();
         }
         private void rentBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tb_search_KeyPress(object sender, KeyPressEventArgs e)
         {
 
         }
@@ -38,13 +34,14 @@ namespace VideoTeka
                 string apiKey = "c2ff92c4";
                 string baseUri = $"http://www.omdbapi.com/?apikey={apiKey}";
 
-
                 string name = tb_search.Text;
-                //string type = "movies";
+                //string type = "series";
+
 
                 var sb = new StringBuilder(baseUri);
-                sb.Append($"&s={name}");
-                // sb.Append($"&type={type}");
+                sb.Append($"&t={name}");
+                //sb.Append($"&type={type}");
+
 
                 var request = WebRequest.Create(sb.ToString());
                 request.Timeout = 1000;
@@ -52,40 +49,21 @@ namespace VideoTeka
                 request.ContentType = "application/json";
 
                 string result = string.Empty;
+                List<Filmlista> Filmek = new List<Filmlista>();
 
-
+                Filmlista valami;
                 using (var response = request.GetResponse())
                 {
                     using (var stream = response.GetResponseStream())
                     {
                         using (var reader = new StreamReader(stream, Encoding.UTF8))
                         {
-                            result = reader.ReadToEnd();
+                            valami = JsonConvert.DeserializeObject<Filmlista>(reader.ReadToEnd());
+                            Filmek.Add(valami);
                         }
                     }
                 }
-                //label1.Text = result;
-                //string szerep;
-                //string ev;
-                //string cim;
-                //string poszter;
-                //string hossz;
-                //int poz = 0;
-                //int veg = 0;
 
-                //poz = result.IndexOf("Year");
-                //ev = result.Substring(poz + 7, 4);
-                //poz = result.IndexOf("Runtime");
-                //hossz = result.Substring(poz + 10, 3);
-                //label4.Text = ev;
-
-
-                //var serializer = new Newtonsoft.Json.JsonSerializer();
-                //Filmek = (List<Filmlista>)serializer.Deserialize(result, typeof(List<Filmlista>));
-
-                //List <Filmlista>Filmek = JsonConvert.DeserializeObject<List<Filmlista>>(result);
-
-                List<Filmlista>  Filmek = LoadFromJsonString(result);
                 Tabla.DataSource = Filmek;
             }
             else
@@ -93,10 +71,30 @@ namespace VideoTeka
                 tb_search.PlaceholderText = "Kérem adjon meg egy film címet!";
             }
         }
-        private static List<Filmlista> LoadFromJsonString(string jsonString)
-        {
-            List<Filmlista> result = JsonConvert.DeserializeObject<List<Filmlista>>(jsonString);
-            return result;
-        }
+        //private static List<Filmlista> LoadFromJsonString(string jsonString)
+        //{
+        //    List<Filmlista> result = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Filmlista>>(jsonString);
+        //    return result;
+        //}
+
+        //private static List<Filmlista> LoadFromJsonFile(string jsonFileName)
+        //{
+        //    var employeeList = new List<Filmlista>();
+
+        //    using (StreamReader file = File.OpenText(jsonFileName))
+        //    {
+        //        var serializer = new Newtonsoft.Json.JsonSerializer();
+        //        employeeList = (List<Filmlista>)serializer.Deserialize(file, typeof(List<Filmlista>));
+        //    }
+
+        //    return employeeList;
+        //}
+
+        //private static string SaveToJsonFile(List<Filmlista> employeeList, string jsonFileName)
+        //{
+        //    string jsonString = JsonConvert.SerializeObject(employeeList, Formatting.Indented);
+        //    File.WriteAllText(jsonFileName, jsonString);
+        //    return jsonString;
+        //}
     }
 }
