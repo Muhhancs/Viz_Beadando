@@ -52,6 +52,8 @@ namespace VideoTeka
                 List<Filmlista> Filmek = new List<Filmlista>();
 
                 Filmlista valami;
+                //Kereses teszt;
+                //List<Kereses> Keres = new List<Kereses>();
                 using (var response = request.GetResponse())
                 {
                     using (var stream = response.GetResponseStream())
@@ -60,10 +62,13 @@ namespace VideoTeka
                         {
                             valami = JsonConvert.DeserializeObject<Filmlista>(reader.ReadToEnd());
                             Filmek.Add(valami);
+
+                            //teszt = JsonConvert.DeserializeObject<Kereses>(reader.ReadToEnd());
+                            //Keres.Add(teszt);
                         }
                     }
                 }
-
+                //Tabla.DataSource = Keres;
                 Tabla.DataSource = Filmek;
             }
             else
