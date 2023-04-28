@@ -39,6 +39,7 @@ namespace VideoTeka
                 errorMsg.Visible = true;
                 errorMsg.Text = "Correct login data!";
                 //opennewTab
+                this.Hide();
                 Form2 form = new Form2();
                 form.ShowDialog();
             }

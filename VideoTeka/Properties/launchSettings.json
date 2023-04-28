@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "VideoTeka": {
+      "commandName": "Project",
+      "hotReloadEnabled": false
+    }
+  }
+}

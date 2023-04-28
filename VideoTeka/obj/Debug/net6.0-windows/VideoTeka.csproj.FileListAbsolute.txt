@@ -55,3 +55,4 @@ I:\Egyetem\4. Félév\Viz_Beadando\VideoTeka\obj\Debug\net6.0-windows\ref\VideoT
 I:\Egyetem\4. Félév\Viz_Beadando\VideoTeka\obj\Debug\net6.0-windows\VideoTeka.Form2.resources
 I:\Egyetem\4. Félév\Viz_Beadando\VideoTeka\obj\Debug\net6.0-windows\VideoTeka.Properties.Resources.resources
 I:\Egyetem\4. Félév\Viz_Beadando\VideoTeka\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+I:\Egyetem\4. Félév\Viz_Beadando\VideoTeka\obj\Debug\net6.0-windows\VideoTeka.Form3.resources
