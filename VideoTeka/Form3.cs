@@ -30,7 +30,14 @@ namespace VideoTeka
             run_text.Text = elso.Runtime;
             plot_text.Text = elso.Plot;
             imdb_text.Text = elso.imdbRating;
-            pictureBox1.ImageLocation = elso.Poster;
+            if (elso.Poster == "N/A")
+            {
+                pictureBox1.ImageLocation = "https://janodob.hu/wp-content/uploads/2019/06/nincs1.png";
+            }
+            else
+            {
+                pictureBox1.ImageLocation = elso.Poster;
+            }
 
         }
 

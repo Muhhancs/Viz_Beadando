@@ -1,7 +1,4 @@
-using Microsoft.VisualBasic.ApplicationServices;
 using MySql.Data.MySqlClient;
-using MySqlX.XDevAPI.Common;
-using System.Data.SqlClient;
 
 namespace VideoTeka
 {

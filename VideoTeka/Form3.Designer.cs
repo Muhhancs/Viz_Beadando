@@ -74,6 +74,7 @@
             pictureBox1.Location = new Point(12, 51);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(300, 450);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
@@ -243,7 +244,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1226, 543);
+            ClientSize = new Size(1226, 516);
             Controls.Add(imdb_text);
             Controls.Add(actor_text);
             Controls.Add(plot_text);
