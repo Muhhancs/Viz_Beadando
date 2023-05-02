@@ -87,13 +87,6 @@ namespace VideoTeka
             }
             return Talalat;
         }
-        private int szamlalo()
-        {
-            int szam = 0;
-
-            return szam;
-        }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
