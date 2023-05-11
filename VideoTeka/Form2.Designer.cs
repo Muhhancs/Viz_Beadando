@@ -91,7 +91,7 @@
             tb_search.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             tb_search.Location = new Point(27, 12);
             tb_search.Name = "tb_search";
-            tb_search.PlaceholderText = "Film Keresés";
+            tb_search.PlaceholderText = "Movie Search";
             tb_search.Size = new Size(274, 27);
             tb_search.TabIndex = 2;
             // 

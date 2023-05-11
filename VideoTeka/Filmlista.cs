@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace VideoTeka
 {
     // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
-    public class Rating
-    {
-        public string Source { get; set; }
-        public string Value { get; set; }
-    }
+    //public class Rating
+    //{
+    //    public string Source { get; set; }
+    //    public string Value { get; set; }
+    //}
 
     public class Filmlista
     {
