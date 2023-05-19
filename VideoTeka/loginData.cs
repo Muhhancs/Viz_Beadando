@@ -20,6 +20,10 @@ namespace VideoTeka
             this.password = d;
         }
 
+        public int Id
+        {
+            get { return id; }
+        }
         public string Password {
             get { return password; }
         }

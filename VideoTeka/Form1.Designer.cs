@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+<<<<<<< Updated upstream
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+>>>>>>> Stashed changes
             this.userText = new System.Windows.Forms.TextBox();
             this.pwdText = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
@@ -36,6 +40,7 @@
             // 
             // userText
             // 
+<<<<<<< Updated upstream
             this.userText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.userText.BackColor = System.Drawing.SystemColors.Window;
             this.userText.Font = new System.Drawing.Font("PanRoman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -85,12 +90,44 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1145, 639);
+=======
+            resources.ApplyResources(this.userText, "userText");
+            this.userText.BackColor = System.Drawing.SystemColors.Window;
+            this.userText.Name = "userText";
+            // 
+            // pwdText
+            // 
+            resources.ApplyResources(this.pwdText, "pwdText");
+            this.pwdText.Name = "pwdText";
+            // 
+            // loginBtn
+            // 
+            resources.ApplyResources(this.loginBtn, "loginBtn");
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.loginBtn_Click_1);
+            // 
+            // errorMsg
+            // 
+            resources.ApplyResources(this.errorMsg, "errorMsg");
+            this.errorMsg.Name = "errorMsg";
+            // 
+            // Form1
+            // 
+            resources.ApplyResources(this, "$this");
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+>>>>>>> Stashed changes
             this.Controls.Add(this.errorMsg);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.pwdText);
             this.Controls.Add(this.userText);
+<<<<<<< Updated upstream
             this.Name = "Form1";
             this.Text = "VideoTeka";
+=======
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "Form1";
+>>>>>>> Stashed changes
             this.ResumeLayout(false);
             this.PerformLayout();
 

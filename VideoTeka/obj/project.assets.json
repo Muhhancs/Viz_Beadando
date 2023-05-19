@@ -14,11 +14,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\VideoTeka\\VideoTeka.csproj",
       "projectName": "VideoTeka",
       "projectPath": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\VideoTeka\\VideoTeka.csproj",
       "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\VideoTeka\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\Vegleges\\Viz_Beadando-Kalmar_patrik\\VideoTeka\\VideoTeka.csproj",
+      "projectName": "VideoTeka",
+      "projectPath": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\Vegleges\\Viz_Beadando-Kalmar_patrik\\VideoTeka\\VideoTeka.csproj",
+      "packagesPath": "C:\\Users\\szabo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\szabo\\Desktop\\Vizuális Programozás\\Vegleges\\Viz_Beadando-Kalmar_patrik\\VideoTeka\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
